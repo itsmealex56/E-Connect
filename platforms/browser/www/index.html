@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="lib/index.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/videos.css">
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+</head>
+
+<body>
+    <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+
+    <template id="page1.html">
+        
+<ons-page id="page1">
+    <img id="econ-logo" src="lib/welcome-logo.png">
+    <div id="content">
+        <ons-button class="join" id="push-button">JOIN</ons-button>
+    </div>
+</ons-page>
+            
+</template>
+
+    <template id="page2.html">
+  <ons-page id="page2">
+<ons-page>
+         <script src="index.js"></script>
+  <ons-toolbar>
+    <div class="left"><ons-back-button>BACK</ons-back-button></div>
+    <div class="center">E-CONNECT</div>
+  </ons-toolbar>
+
+  <ons-tabbar swipeable position="auto">
+    <ons-tab page="tab1.html" label="CALL" icon="ion-ios-telephone, material:ion-ios-telephone"  active>
+    </ons-tab>
+    <ons-tab page="tab2.html" label="CHAT" icon="ion-ios-chatboxes" >
+    </ons-tab>
+  </ons-tabbar>
+</ons-page>
+
+<template id="tab1.html">
+  <ons-page id="call">
+
+    <img id="gcall" src="lib/group-call.png">
+     <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
+     <div id="content-pg-call">
+        <input type="text" id="room-id" value="RESCUE" autocorrect=off autocapitalize=off size=20> <br> <br>
+         
+        <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
+
+        <div id="audios-container"></div>
+         <ons-button id="join-room">Join Call Conferencing</ons-button>
+        <ons-button id="open-or-join-room">Auto Join Call Conferencing</ons-button>
+         <br>
+         <br>
+        <ons-button id="btn-leave-room" disabled>Leave /or close the room</ons-button>
+        <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
+        <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+  </ons-page>
+</template>
+
+    <template id="tab2.html">
+  <ons-page id="chat">
+<!--
+    <p style="text-align: center;">
+      This is the second page.
+    </p>
+-->
+        <div class="chat-messages">
+            <div class="chat">
+                <div class="chat-content">
+               
+              </div>       
+            <div class="write-form-chat">
+                <input id="input-chat" type="text" placeholder='Type your message here...' />
+                <span class="send-btn"> <button  type='submit'><ons-icon class="icon-send-btn" icon="ion-paper-airplane"></ons-icon> </button> </span>
+            </div>
+          </div>
+        </div> 
+  </ons-page>
+</template>
+    </ons-page>
+    </template>
+
+</body>
+<script src="onsenapp.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/RTCMultiConnection.js"></script>
+<!-- <script src="js/adapter.js"></script> -->
+<script src="js/socket.io.js"></script>
+
+
+</html>

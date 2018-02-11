@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "EconnectV2",
+  "short_name": "EconnectV2",
+  "version": "com.econnectv2.demo",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": "Alexander Kim Waing",
+  "icons": [],
+  "start_url": "index.html"
+}

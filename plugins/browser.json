@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.econnectv2.demo"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.econnectv2.demo"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.econnectv2.demo"
+    }
+  },
+  "dependent_plugins": {}
+}
