@@ -6,19 +6,26 @@ document.addEventListener('init', function (event) {
             var name = document.getElementById('name').value;
 
             if (name !== '') {
-                ons.notification.alert('Hello ' + name + '!');
+                
+                var modal = document.querySelector('ons-modal');
+                modal.show();
+                setTimeout(function () {
+                    modal.hide();
+                    document.querySelector('#myNavigator').pushPage('page2.html', {
+                        data: {
+                            title: 'Page 2'
+                        }
+                    });
+                }, 2000);
 
-                document.querySelector('#myNavigator').pushPage('page2.html', {
-                    data: {
-                        title: 'Page 2'
-                    }
-                });
+
             } else {
                 ons.notification.alert('Please enter your name.');
             }
         };
     }
 });
+
 //var login = function() {
 //  var name = document.getElementById('name').value;
 //    

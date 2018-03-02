@@ -6,7 +6,7 @@ document.addEventListener('init', function (event) {
             var name = document.getElementById('name').value;
 
             if (name !== '') {
-
+                
                 var modal = document.querySelector('ons-modal');
                 modal.show();
                 setTimeout(function () {
